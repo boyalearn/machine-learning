@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.machine.learning</groupId>
-    <artifactId>machine-learning-parent</artifactId>
+    <artifactId>machine-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>machine-learning-explore</artifactId>
