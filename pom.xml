@@ -25,6 +25,7 @@
 	</dependencies>
 	<modules>
 		<module>machine-learning-explore</module>
+		<module>machine-learning-storage</module>
 	</modules>
 	<build>
 		<plugins>
