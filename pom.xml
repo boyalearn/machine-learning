@@ -26,6 +26,8 @@
 	<modules>
 		<module>machine-learning-explore</module>
 		<module>machine-learning-storage</module>
+		<module>machine-learning-algorithm</module>
+		<module>machine-learning-analysis</module>
 	</modules>
 	<build>
 		<plugins>
