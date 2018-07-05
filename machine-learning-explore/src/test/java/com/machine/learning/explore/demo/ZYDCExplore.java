@@ -8,6 +8,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import com.machine.learning.explore.Explore;
 import com.machine.learning.explore.web.WebExplore;
 import com.machine.learning.explore.web.utils.StringUtils;
 
@@ -46,6 +47,12 @@ public class ZYDCExplore extends WebExplore{
 		explore.setUrl("https://cd.fang.anjuke.com/loupan/438032.html");
 		explore.findContent();
 		explore.doFindUseFulInfo();
+	}
+
+	@Override
+	public Explore getNewInstance() {
+		// TODO Auto-generated method stub
+		return new ZYDCExplore();
 	}
 	
 }

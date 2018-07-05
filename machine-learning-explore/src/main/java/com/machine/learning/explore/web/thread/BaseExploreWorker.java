@@ -15,7 +15,7 @@ public class BaseExploreWorker implements ExploreWorker{
 	public BaseExploreWorker(String serchUrl, Explore explore) {
 		super();
 		this.serchUrl = serchUrl;
-		this.explore = explore;
+		this.explore = explore.getNewInstance();
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class BaseExploreWorker implements ExploreWorker{
 			do{
 				page++;
 				String pageUrl=serchUrl+page;
-				
+				System.out.println(pageUrl);
 			    explore.setUrl(pageUrl);
 				explore.findContent();
 				if(null==explore.getContent()){

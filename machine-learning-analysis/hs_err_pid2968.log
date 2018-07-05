@@ -1,0 +1,170 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  Internal Error (exceptions.cpp:427), pid=2968, tid=0x00000478
+#  fatal error: ExceptionMark destructor expects no pending exceptions
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_172-b11) (build 1.8.0_172-b11)
+# Java VM: Java HotSpot(TM) Client VM (25.172-b11 mixed mode windows-x86 )
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00f7d000):  JavaThread "main" [_thread_in_vm, id=1144, stack(0x00c90000,0x00ce0000)]
+
+Stack: [0x00c90000,0x00ce0000],  sp=0x00cdf854,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1acd5b]
+V  [jvm.dll+0x1a53d6]
+V  [jvm.dll+0x1a5e9a]
+V  [jvm.dll+0x17fa39]
+V  [jvm.dll+0xe8001]
+C  [javaw.exe+0x155f]
+C  [javaw.exe+0x20d6]
+C  [javaw.exe+0xb020]
+C  [javaw.exe+0xb0aa]
+C  [KERNEL32.DLL+0x1866]
+C  [ntdll.dll+0x368f1]
+C  [ntdll.dll+0x3689d]
+C  0x00000000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x144bc800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=208, stack(0x14700000,0x14750000)]
+  0x144bbc00 JavaThread "Attach Listener" daemon [_thread_blocked, id=1880, stack(0x146b0000,0x14700000)]
+  0x14497400 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1788, stack(0x14660000,0x146b0000)]
+  0x1447a000 JavaThread "Finalizer" daemon [_thread_blocked, id=3604, stack(0x03fa0000,0x03ff0000)]
+  0x14464400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5084, stack(0x00f80000,0x00fd0000)]
+=>0x00f7d000 JavaThread "main" [_thread_in_vm, id=1144, stack(0x00c90000,0x00ce0000)]
+
+Other Threads:
+  0x00e8d000 VMThread [stack: 0x00f10000,0x00f60000] [id=4668]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 4928K, used 635K [0x04000000, 0x04550000, 0x09550000)
+  eden space 4416K,  14% used [0x04000000, 0x0409ef40, 0x04450000)
+  from space 512K,   0% used [0x04450000, 0x04450000, 0x044d0000)
+  to   space 512K,   0% used [0x044d0000, 0x044d0000, 0x04550000)
+ tenured generation   total 10944K, used 0K [0x09550000, 0x0a000000, 0x14000000)
+   the space 10944K,   0% used [0x09550000, 0x09550000, 0x09550200, 0x0a000000)
+ Metaspace       used 1370K, capacity 2240K, committed 2240K, reserved 4480K
+
+Card table byte_map: [0x03f10000,0x03fa0000] byte_map_base: 0x03ef0000
+
+Polling page: 0x00ce0000
+
+CodeCache: size=32768Kb used=635Kb max_used=635Kb free=32132Kb
+ bounds [0x01f10000, 0x01fb0000, 0x03f10000]
+ total_blobs=134 nmethods=0 adapters=67
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (4 events):
+Event: 0.463 Thread 0x00f7d000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x04006ea8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u172\10810\hotspot\src\shar
+Event: 0.463 Thread 0x00f7d000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x04007178) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u172\10810\hotspot\src\share\vm\prims\jni.cpp
+Event: 1.123 Thread 0x00f7d000 Exception <a 'java/lang/NoClassDefFoundError': java/lang/invoke/MethodHandleImpl> (0x0409be00) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u172\10810\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 208]
+Event: 1.123 Thread 0x00f7d000 Exception <a 'java/lang/NoClassDefFoundError'> (0x0409be00) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u172\10810\hotspot\src\share\vm\oops\instanceKlass.cpp, line 959]
+
+Events (10 events):
+Event: 0.931 loading class sun/net/www/protocol/jar/Handler done
+Event: 0.932 loading class sun/misc/Launcher$AppClassLoader$1
+Event: 0.932 loading class sun/misc/Launcher$AppClassLoader$1 done
+Event: 1.101 loading class java/lang/SystemClassLoaderAction
+Event: 1.123 loading class java/lang/SystemClassLoaderAction done
+Event: 1.123 Thread 0x14497400 Thread added: 0x14497400
+Event: 1.123 Thread 0x144bbc00 Thread added: 0x144bbc00
+Event: 1.123 Thread 0x144bc800 Thread added: 0x144bc800
+Event: 1.123 loading class java/lang/invoke/MethodHandleImpl
+Event: 1.123 loading class java/lang/invoke/MethodHandleImpl done
+
+
+Dynamic libraries:
+0x00ff0000 - 0x01023000 	D:\Java1.8\jre\bin\javaw.exe
+0x773e0000 - 0x77547000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x75240000 - 0x75338000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x74b60000 - 0x74c1d000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x75680000 - 0x7572e000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x758a0000 - 0x759c1000 	C:\WINDOWS\system32\USER32.dll
+0x72290000 - 0x72487000 	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9200.16384_none_893961408605e985\COMCTL32.dll
+0x77270000 - 0x77321000 	C:\WINDOWS\system32\msvcrt.dll
+0x76d80000 - 0x76db4000 	C:\WINDOWS\SYSTEM32\sechost.dll
+0x75730000 - 0x75802000 	C:\WINDOWS\system32\RPCRT4.dll
+0x76ec0000 - 0x76fca000 	C:\WINDOWS\system32\GDI32.dll
+0x773b0000 - 0x773db000 	C:\WINDOWS\system32\IMM32.DLL
+0x77190000 - 0x7726c000 	C:\WINDOWS\system32\MSCTF.dll
+0x6be40000 - 0x6be69000 	C:\WINDOWS\system32\nvinit.dll
+0x71f40000 - 0x71f48000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x73ca0000 - 0x73ca6000 	C:\Program Files\NVIDIA Corporation\CoProcManager\_etoured.dll
+0x73a70000 - 0x73aa1000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrap.dll
+0x75af0000 - 0x75c9f000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x74c20000 - 0x74c66000 	C:\WINDOWS\system32\CFGMGR32.dll
+0x74e00000 - 0x74e1e000 	C:\WINDOWS\system32\DEVOBJ.dll
+0x73c00000 - 0x73c20000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrap.dll
+0x69250000 - 0x6930f000 	D:\Java1.8\jre\bin\msvcr100.dll
+0x5aba0000 - 0x5af73000 	D:\Java1.8\jre\bin\client\jvm.dll
+0x73c70000 - 0x73c78000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x6c550000 - 0x6c571000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x75230000 - 0x75236000 	C:\WINDOWS\system32\PSAPI.DLL
+0x74e70000 - 0x74ec0000 	C:\WINDOWS\system32\WS2_32.dll
+0x69070000 - 0x6909a000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x76d70000 - 0x76d78000 	C:\WINDOWS\system32\NSI.dll
+0x73c60000 - 0x73c6c000 	D:\Java1.8\jre\bin\verify.dll
+0x6c0d0000 - 0x6c0f2000 	D:\Java1.8\jre\bin\java.dll
+0x73910000 - 0x73924000 	D:\Java1.8\jre\bin\zip.dll
+0x75ca0000 - 0x76d65000 	C:\WINDOWS\system32\SHELL32.dll
+0x754e0000 - 0x75616000 	C:\WINDOWS\SYSTEM32\combase.dll
+0x75080000 - 0x750c0000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x77330000 - 0x773a5000 	C:\WINDOWS\system32\SHCORE.dll
+0x74a30000 - 0x74a41000 	C:\WINDOWS\SYSTEM32\profapi.dll
+0x678d0000 - 0x679f9000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=GBK 
+java_command: com.machine.learning.house.Application
+java_class_path (initial): D:\Java1.8\JRE\lib\resources.jar;D:\Java1.8\JRE\lib\rt.jar;D:\Java1.8\JRE\lib\jsse.jar;D:\Java1.8\JRE\lib\jce.jar;D:\Java1.8\JRE\lib\charsets.jar;D:\Java1.8\JRE\lib\jfr.jar;D:\Java1.8\JRE\lib\ext\access-bridge.jar;D:\Java1.8\JRE\lib\ext\cldrdata.jar;D:\Java1.8\JRE\lib\ext\dnsns.jar;D:\Java1.8\JRE\lib\ext\jaccess.jar;D:\Java1.8\JRE\lib\ext\jfxrt.jar;D:\Java1.8\JRE\lib\ext\localedata.jar;D:\Java1.8\JRE\lib\ext\nashorn.jar;D:\Java1.8\JRE\lib\ext\sunec.jar;D:\Java1.8\JRE\lib\ext\sunjce_provider.jar;D:\Java1.8\JRE\lib\ext\sunmscapi.jar;D:\Java1.8\JRE\lib\ext\sunpkcs11.jar;D:\Java1.8\JRE\lib\ext\zipfs.jar;F:\Eclipse8\GitSpace\machine-learning\machine-learning-analysis\target\classes;F:\Eclipse8\GitSpace\machine-learning\machine-learning-explore\target\classes;F:\Eclipse8\GitSpace\machine-learning\machine-learning-entities\target\classes;F:\Eclipse8\GitSpace\machine-learning\machine-learning-storage\target\classes;D:\Maven3.5.4\repo\mysql\mysql-connector-java\5.1.24\mysql-connector-java-5.1.24.jar;D:\Maven3.5.4\repo\org\mybatis\mybatis\3.2.6\mybatis-3.2.6.jar;D:\Maven3.5.4\repo\org\jsoup\jsoup\1.10.2\jsoup-1.10.2.jar;D:\Maven3.5.4\repo\net\sf\json-lib\json-lib\2.4\json-lib-2.4-jdk15.jar;D:\Maven3.5.4\repo\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;D:\Maven3.5.4\repo\commons-collections\commons-collections\3.2.1\commons-collections-3.2.1.jar;D:\Maven3.5.4\repo\commons-lang\commons-lang\2.5\commons-lang-2.5.jar;D:\Maven3.5.4\repo\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;D:\Maven3.5.4\repo\net\sf\ezmorph\ezmorph\1.0.6\ezmorph-1.0.6.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=D:\Java1.8\JDK
+CLASSPATH=.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+PATH=D:/Java1.8/JRE/bin/client;D:/Java1.8/JRE/bin;D:/Java1.8/JRE/lib/i386;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\Java1.8\JDK\bin;D:\Java1.8\JDK\jre\bin;D:\Maven3.5.4\bin; ;C:\Program Files\NVIDIA Corporation\PhysX\Common;D:\DGSetup\DriverGenius;D:\DGSetup\DriverGenius\ksoft;D:\Java1.8\JRE\eclipse;
+USERNAME=ZouHuiXing
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8 Build 9200 (6.2.9200.16384)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 3012864k(670264k free), swap 6027520k(2975520k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.172-b11) for windows-x86 JRE (1.8.0_172-b11), built on Mar 28 2018 20:19:55 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Jul 04 23:01:11 2018
+elapsed time: 1 seconds (0d 0h 0m 1s)
+

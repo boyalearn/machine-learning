@@ -11,11 +11,10 @@ public class BaseWorkerWorker implements ExploreWorker{
 	private String url;
 	
 	
-	
 
 	public BaseWorkerWorker(String url,Explore explore) {
 		super();
-		this.explore = explore;
+		this.explore = explore.getNewInstance();
 		this.url = url;
 	}
 

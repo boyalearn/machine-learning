@@ -17,4 +17,6 @@ public interface Explore {
 	public Document getContent();
 	
 	public void setUrl(String url);
+	
+	public Explore getNewInstance();
 }
