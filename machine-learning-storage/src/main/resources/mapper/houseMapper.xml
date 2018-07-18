@@ -10,6 +10,6 @@
     </select>
     
     <insert id="addHouseInfo" parameterType="AnJuKeHoseEvt" keyProperty="id" useGeneratedKeys="true">
-        INSERT  INTO  analysis_house_info(houseName,price,lng,lat,aroundPrice,address) values(#{houseName},#{price},#{lng},#{lat},#{aroundPrice},#{address})
+        INSERT  INTO  analysis_house_info(houseName,price,lng,lat,aroundPrice,address,url,content) values(#{houseName},#{price},#{lng},#{lat},#{aroundPrice},#{address},#{url},#{content})
     </insert>
 </mapper>

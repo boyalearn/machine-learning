@@ -13,7 +13,7 @@ public abstract class WebExplore implements Explore{
 	
 	protected Document content;
 	
-	private String url;
+	protected String url;
 
 
 

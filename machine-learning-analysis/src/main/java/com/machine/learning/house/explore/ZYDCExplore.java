@@ -40,6 +40,8 @@ public class ZYDCExplore extends WebExplore{
 		house.setHouseName(houseName);
 		house.setLat(lat);
 		house.setLng(lng);
+		house.setUrl(this.url);
+		house.setContent(this.content.body().text());
 		HouseService.getInstance().addHouseInfo(house);
 		
 	}
