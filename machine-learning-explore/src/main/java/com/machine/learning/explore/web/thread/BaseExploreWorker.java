@@ -37,6 +37,7 @@ public class BaseExploreWorker implements ExploreWorker{
 				if(null==explore.getContent()){
 					continue;
 				}
+				explore.doFindUseFulInfo();
 				List<String> urls=explore.findUrlInContent();
 				for(String url: urls){
 					ThreadPool.getInstance().execute(new BaseWorkerWorker(url,explore));

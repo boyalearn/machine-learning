@@ -20,7 +20,6 @@ import net.sf.json.JSONObject;
 
 public class ZYDCExplore extends WebExplore{
 
-	@SuppressWarnings("unused")
 	@Override
 	public void doFindUseFulInfo() {
         Document doc=super.getContent();
