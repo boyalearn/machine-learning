@@ -7,15 +7,15 @@ import java.math.BigDecimal;
  */
 public interface ValueCalculate {
     /**
-     * 结合多个条件因素分析通货膨胀率来分析数据走势决策
+     * 计算产出
      *
-     * @param money
-     * @param year
-     * @param inflationRate
-     * @param bankRate
-     * @return
+     * @param valueInput 价值投入
+     * @param ate 比率
+     * @return 价值产出
      */
-    BigDecimal valueDecreaseCalculate(BigDecimal money, BigDecimal year, BigDecimal inflationRate, BigDecimal bankRate);
+    BigDecimal calculateValueOutput(ValueInput valueInput,BigDecimal ate);
+
+    BigDecimal calculateInput(ValueInput valueInput);
 
 
 }
